@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>Discogs Toped Seller Desc</title>
+</head>
+<body>
+	<form method="POST">
+		<table>
+			<tr>
+				<th>Cat No</th>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="cat_no" placeholder="MKF 1010">
+				</td>
+				<td>
+					<button>SEARCH</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+	{% if message %}
+	{{message}}
+	{% elif record_details %}
+	<table>
+		<tr>
+			<td><b>Lapak Title</b></td>
+		</tr>
+		<tr>
+			<td>{{record_details.short}}</td>
+		</tr>
+		<tr>
+			<td><b>Lapak Descriptions</b></td>
+		</tr>
+		<tr>
+			<td>Formats : {{record_details.formats}}</td>
+		</tr>
+		<tr>
+			<td>Cat No : {{record_details.cat_no}}</td>
+		</tr>
+		<tr>
+			<td>Artist : {{record_details.artist}}</td>
+		</tr>
+		<tr>
+			<td>Title : {{record_details.title}}</td>
+		</tr>
+		<tr>
+			<td>Year : {{record_details.year}}</td>
+		</tr>
+		<tr>
+			<td>Genres : {{record_details.genres}}</td>
+		</tr>
+		<tr>
+			<td>Country : {{record_details.country}}</td>
+		</tr>
+		<tr>
+			<td>Label : {{record_details.label}}</td>
+		</tr>
+		<tr>
+			<td>Tracklist : {{record_details.tracklists}}</td>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+	</table>
+	{% endif %}
+</body>
+</html>
